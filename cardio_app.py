@@ -8,7 +8,7 @@ import pickle
 def load_model():
     with open("xgb_model.pkl", "rb") as f:
         return pickle.load(f)
-
+    return model
 model = load_model()
 
 st.set_page_config(page_title="심혈관 위험 예측기", layout="wide")
