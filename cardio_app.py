@@ -26,7 +26,7 @@ height = st.sidebar.number_input("키 (cm)", 140, 200, 170)
 weight = st.sidebar.number_input("몸무게 (kg)", 40, 150, 65)
 ap_hi = st.sidebar.slider("수축기 혈압", 90, 200, 120)
 ap_lo = st.sidebar.slider("이완기 혈압", 40, 130, 80)
-cholesterol = st.sidebar.selectbox("콜레스테롤 등급", [1, 2, 3])
+cholesterol = st.sidebar.selectbox("콜레스테롤 등급", [안정, 경계, 위험])
 gluc = st.sidebar.selectbox("혈당 등급", [1, 2, 3])
 smoke = st.sidebar.checkbox("흡연 여부")
 alco = st.sidebar.checkbox("음주 여부")
@@ -103,3 +103,4 @@ sim_proba_combined = model.predict_proba(sim_df_combined)[0][1]
 
 # 결과 표시
 st.info(f"혈압을 {ap_hi}/{ap_lo} → {sim_ap_hi}/{sim_ap_lo} mmHg로 조정하면\n\n위험도는 {sim_proba_combined*100:.2f}%입니다.")
+
