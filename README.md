@@ -32,7 +32,9 @@ https://cardio-project-q2btpa92nykgwv7ooabl6k.streamlit.app/
 
 하이퍼 파라미터 튜닝할떄 최적화
 그리드 서치 튜닝으로
+
 7만이면 굳이 전이학습 안해도 됨
+
 
 개인별 개선 제안 이걸 하이라이트로
 생성형 ai랑 연결해 개선재안
