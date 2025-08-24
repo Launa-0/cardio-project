@@ -27,8 +27,6 @@ autogluon을 사용하려 했지만 자꾸 충돌이 일어나서 학습했던 �
 https://cardio-project-q2btpa92nykgwv7ooabl6k.streamlit.app/
 
 
-
-
 +++)) 8월 24일 최종발표회 교수님 개선사항
 
 
