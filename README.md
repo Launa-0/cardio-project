@@ -28,6 +28,8 @@ https://cardio-project-q2btpa92nykgwv7ooabl6k.streamlit.app/
 
 
 +++)) 8월 24일 최종발표회 교수님 개선사항
+
+
 하이퍼 파라미터 튜닝할떄 최적화
 그리드 서치 튜닝으로
 7만이면 굳이 전이학습 안해도 됨
