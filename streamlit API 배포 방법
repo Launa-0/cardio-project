@@ -1,1 +1,39 @@
-ㄴ
+1. .streamlit/secrets.toml 파일 생성
+
+Streamlit 앱 디렉토리 안에 .streamlit 폴더를 만들고, 그 안에 secrets.toml 파일을 생성
+
+your_project/
+├── .streamlit/
+│   └── secrets.toml
+├── project.py
+
+secrets.toml 내용:
+[google]
+api_key = "여기에_새로운_API_KEY_붙여넣기"
+
+2. Python 코드에서 키를 안전하게 불러오기
+
+project.py 코드에서 이렇게 사용:
+
+import streamlit as st
+api_key = st.secrets["google"]["api_key"]
+
+절대로 아래처럼 직접 넣지 말기: api_key = "AIzaSy...." 
+
+3. 깃허브에 업로드할 때 API 키 포함된 파일은 .gitignore 처리
+
+로컬과 깃허브에 둘다 생성
+
+.gitignore에 아래 줄을 반드시 포함:
+# 환경설정 및 민감 정보 파일 무시
+.streamlit/secrets.toml
+
+4. Streamlit Cloud에서 배포 시 할 일
+
+배포한 후 Streamlit Cloud에서:
+배포된 앱 우측 하단 “Manage app” 클릭
+왼쪽 메뉴에서 “Secrets” 선택
+
+다음과 같이 입력:
+[google]
+api_key = "여기에_새로운_API_KEY_붙여넣기"
