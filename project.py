@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 import google.generativeai as genai
 
 # ✅ Gemini API 키 설정 (https://makersuite.google.com/app 에서 발급 가능)
-genai.configure(api_key="AIzaSyAQohnRRkfkfagrNtxBJvaIjepMiNjfLdM")  # ← 본인의 키로 교체하세요
+genai.configure(api_key=".........")  # ← 본인의 키로 교체하세요
 
 # ✅ Gemini 모델 초기화
 gemini_model = genai.GenerativeModel("gemini-1.5-flash")
@@ -207,3 +207,4 @@ sim_df = pd.DataFrame([sim_data])
 sim_proba = model.predict_proba(sim_df)[0][1]
 
 st.info(f"혈압을 {ap_hi}/{ap_lo} → {sim_ap_hi}/{sim_ap_lo} mmHg로 조정하면, 위험도는 {sim_proba*100:.2f}%로 바뀝니다.")
+
